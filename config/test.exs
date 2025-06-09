@@ -41,7 +41,8 @@ config :wallaby, driver: Wallaby.Chrome
 config :wallaby,
   chromedriver: [
     path: "/home/zw/chromedriver-linux64/chromedriver",
-    binary: "/home/zw/chrome-linux64/chrome"
+    binary: "/home/zw/chrome-linux64/chrome",
+    headless: true
   ]
 
 config :wallaby, otp_app: :chatter

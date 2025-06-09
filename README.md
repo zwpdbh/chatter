@@ -27,6 +27,11 @@ Application.put_env(:wallaby, :base_url, ChatterWeb.Endpoint.url())
 4. In `test.exs` 
 
 ```elixir 
+config :chatter, ChatterWeb.Endpoint,
+  ...
+  # change from false to true
+  server: true
+
 config :wallaby, driver: Wallaby.Chrome
 
 config :wallaby,
@@ -38,11 +43,6 @@ config :wallaby,
 
 config :wallaby, otp_app: :chatter
 config :chatter, :sandbox, Ecto.Adapters.SQL.Sandbox
-
-config :chatter, ChatterWeb.Endpoint,
-  ...
-  # change from false to true
-  server: true
 ```
 
 5. In `endpoint.ex`
