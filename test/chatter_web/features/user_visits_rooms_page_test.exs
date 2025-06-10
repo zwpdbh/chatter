@@ -4,10 +4,8 @@ defmodule ChatterWeb.UserVisitsRoomsPageTest do
   feature "user visits rooms page to see a list of rooms", %{session: session} do
     room = insert(:chat_room)
 
-    Route
-
     session
-    |> visit("/rooms")
+    |> visit(Routes.chat_room_path(@endpoint, :index))
     |> assert_has(Query.css(".room", text: room.name))
   end
 end
