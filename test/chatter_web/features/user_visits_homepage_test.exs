@@ -1,6 +1,5 @@
 defmodule ChatterWeb.UserVisitsHomepageTest do
-  use ExUnit.Case, async: true
-  use Wallaby.Feature
+  use ChatterWeb.FeatureCase
 
   feature "user can visit homepage", %{session: session} do
     session

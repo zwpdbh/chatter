@@ -59,7 +59,8 @@ defmodule Chatter.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
-      {:wallaby, "~> 0.30", runtime: false, only: :test}
+      {:wallaby, "~> 0.30", runtime: false, only: :test},
+      {:ex_machina, "~> 2.8.0", only: :test}
     ]
   end
 
